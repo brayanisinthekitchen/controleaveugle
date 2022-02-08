@@ -1,1 +1,23 @@
+@import '../couleurs.scss';
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  h2{
+    color: $blanc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 20px;
+  }
+  .rejoindre{
+    padding: 15px;
+    background-color: $corail;
+    color: $blanc;
+    font-size: 16px;
+    border-radius: 33px;
+    border: none;
+    margin-right: 25px;
+    box-shadow: 0px 3px 5px $noir;
+  }
+}
 
