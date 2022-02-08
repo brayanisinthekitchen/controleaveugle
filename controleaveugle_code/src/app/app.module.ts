@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from "./pages/login/login.component";
 import { PagesModule } from "./pages/pages.module";
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
