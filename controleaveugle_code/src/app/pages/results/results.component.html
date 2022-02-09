@@ -6,7 +6,7 @@
         <th colspan="2">Resultats</th>
     </tr>
   </thead>
-  <tbody *ngFor="let joueur of joueurs">
+  <tbody *ngFor="let joueur of joueurs  | orderBy:'-points'">
       <tr>
         <td>{{joueur.nom}}</td>
         <td>{{joueur.points}}</td>
@@ -14,9 +14,11 @@
   </tbody>
 </table>
 
+
 <div class="affichage_podium">
   <div class="place second">
     <div class="avatar"></div>
+
     <div class="seconde_place">2</div>
   </div>
   <div class="place premier">
