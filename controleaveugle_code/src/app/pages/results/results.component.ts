@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JOUEURS } from 'src/app/joueurs';
 
 @Component({
   selector: 'app-results',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./results.component.scss']
 })
 export class ResultsComponent implements OnInit {
-
+  joueurs = JOUEURS;
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

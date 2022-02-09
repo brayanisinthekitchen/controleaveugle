@@ -1,13 +1,130 @@
-#joueurs{
+@import '../../couleurs';
+
+#reponse{
+  width: 100%;
   display: flex;
   flex-direction: row;
-  margin-left: 20vw;
-  overflow-x: hidden;
-
+  justify-content: space-around;
+}
+.response{
+  width: 33%;
+}
+#container_reponse{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.liste_joueur{
-margin-right: 2vw;
-border: 1px dashed darkgray;
-border-radius: 20%;
+input {
+  padding: 1rem;
+  width: 100%;
+  background-color: $vert_champ;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 33px;
+  border: none;
+}
+
+input:focus {
+  outline: $lavande auto 1px;
+}
+
+
+::placeholder{
+  color: rgba(156, 153, 153, 0.74) ;
+  font-size: 18px;
+}
+
+
+#envoyer{
+  width: 10%;
+  padding: 15px;
+  margin-top: 2vh;
+  width: 10%;
+  background-color: $corail;
+  color: $blanc;
+  font-size: 16px;
+  border-radius: 33px;
+  border: none;
+
+  box-shadow: 0px 3px 5px $noir;
+  align-self: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container_loading {
+  text-align: center;
+  position: relative;
+  color: $blanc;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 50%;
+  margin: 10vh auto;
+  padding: 20px 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.Loading {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  background: #f1f1f1;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.Loading:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  animation: load 180s infinite;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+    background: #a28089;
+  }
+
+  25% {
+    width: 40%;
+    background: #a0d2eb;
+  }
+
+  50% {
+    width: 60%;
+    background: #ffa8b6;
+  }
+
+  75% {
+    width: 75%;
+    background: #d0bdf4;
+  }
+
+  100% {
+    width: 100%;
+    background: #494d5f;
+  }
+}
+
+
+label {
+  display: block;
+  color: $blanc ;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 1rem;
+  margin-bottom: 20px;
+
 }

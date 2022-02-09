@@ -11,7 +11,12 @@ import { ListPlaylistComponent } from './pages/list-playlist/list-playlist.compo
 import { PartieComponent } from './partie/partie.component';
 import { ResultsComponent } from './pages/results/results.component';
 import { HeaderComponent } from './pages/header/header.component';
+<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+=======
+import { JoueurComponent } from './joueur/joueur.component';
+import {NgPipesModule} from 'ngx-pipes';
+>>>>>>> 72465f827315389bcb0da85f6184814149a11f99
 
 @NgModule({
   declarations: [
@@ -21,16 +26,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListPlaylistComponent,
     ResultsComponent,
     HeaderComponent,
-    PartieComponent
+    PartieComponent,
+    JoueurComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+<<<<<<< HEAD
     FormsModule,
     PagesModule,
     BrowserAnimationsModule,
     
+=======
+    PagesModule,
+    NgPipesModule
+>>>>>>> 72465f827315389bcb0da85f6184814149a11f99
   ],
   providers: [],
   bootstrap: [AppComponent],
