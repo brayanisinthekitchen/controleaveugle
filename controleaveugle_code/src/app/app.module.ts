@@ -13,6 +13,7 @@ import { PartieComponent } from './partie/partie.component';
 import { ResultsComponent } from './pages/results/results.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { JoueurComponent } from './joueur/joueur.component';
+import {NgPipesModule} from 'ngx-pipes';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { JoueurComponent } from './joueur/joueur.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    PagesModule
+    PagesModule,
+    NgPipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
