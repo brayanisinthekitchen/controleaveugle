@@ -1,13 +1,13 @@
+@import '../../couleurs';
 #joueurs{
   display: flex;
   flex-direction: row;
-  margin-left: 15vw;
   overflow-x: hidden;
 
 }
 
 .liste_joueur{
-  margin-right: 2vw;
+  margin: auto;
   border: 1px dashed darkgray;
   border-radius: 20%;
 }
@@ -15,11 +15,25 @@
 #reponse{
   display: flex;
   flex-direction: row;
-  margin-left: 15vw;
-  margin-right: 15vw;
   justify-content: space-around;
 }
+#container_reponse{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+#envoyer{
+  padding: 15px;
+  margin-top: 2vh;
+  background-color: $corail;
+  color: $blanc;
+  font-size: 16px;
+  border-radius: 33px;
+  border: none;
+  margin-right: 25px;
+  box-shadow: 0px 3px 5px $noir;
+}
 
 body {
   margin: 0;
@@ -29,7 +43,7 @@ body {
 .container_loading {
   position: relative;
   width: 50%;
-  margin: 280px auto;
+  margin: 10vh auto;
   padding: 20px 40px;
   border-radius: 4px;
   box-sizing: border-box;
