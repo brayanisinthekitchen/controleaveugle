@@ -20,7 +20,11 @@
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "@popperjs/core": "^2.11.2",
+<<<<<<< HEAD
     "@types/jquery": "^3.5.13",
+=======
+    "angular-spotify": "^1.5.1",
+>>>>>>> b89d14942a0a598405004fb33565d280388c3bf5
     "bootstrap": "^5.1.3",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
