@@ -26,6 +26,12 @@ h2{
       background-size:cover;
       background-repeat: no-repeat;
       border-radius: 33px;
+      transition-duration: 1s;
+    }
+
+    .image_playlist:hover{
+      transform: scale(1.3);
+      transition-duration: 1s;
     }
   }
 
