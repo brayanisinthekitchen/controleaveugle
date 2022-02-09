@@ -4,19 +4,19 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) { }
-  //Form Validables 
+  //Form Validables
   registerForm:any =  FormGroup;
   submitted = false;
 
   //Add user form actions
   get f() { return this.registerForm.controls; }
   onSubmit() {
-    
+
     this.submitted = true;
     // stop here if form is invalid
     if (this.registerForm.invalid) {
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     {
       alert("Great!!");
     }
-  
+
   }
 
     //login form
