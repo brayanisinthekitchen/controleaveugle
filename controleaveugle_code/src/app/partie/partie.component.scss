@@ -1,0 +1,13 @@
+#joueurs{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20vw;
+  overflow-x: hidden;
+
+}
+
+.liste_joueur{
+margin-right: 2vw;
+border: 1px dashed darkgray;
+border-radius: 20%;
+}
