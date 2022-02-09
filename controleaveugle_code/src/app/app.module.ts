@@ -9,6 +9,7 @@ import { PagesModule } from "./pages/pages.module";
 import { DashboardWithAccountComponent } from './pages/dashboard-with-account/dashboard-with-account.component';
 import { PlaylistSearchComponent } from './pages/playlist-search/playlist-search.component';
 import { ListPlaylistComponent } from './pages/list-playlist/list-playlist.component';
+import { PartieComponent } from './partie/partie.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ListPlaylistComponent } from './pages/list-playlist/list-playlist.compo
     DashboardWithAccountComponent,
     PlaylistSearchComponent,
     ListPlaylistComponent,
+    PartieComponent,
   ],
   imports: [
     BrowserModule,
