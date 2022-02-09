@@ -9,15 +9,17 @@ import { Joueur } from 'src/app/joueur';
 })
 export class ResultsComponent implements OnInit {
   joueurs = JOUEURS;
+  trioGagnant: any ;
   constructor() { }
 
   ngOnInit(): void {
-    this.getTrio(this.joueurs);
+    this.trioGagnant = this.getTrio(this.joueurs);
   }
 
   getTrio(joueurs = JOUEURS){
-    let trio = [];
-    let listeTriee = joueurs.sort();
-    console.log(listeTriee);
+    let listeTriee = joueurs.sort().reverse();
+    let trio = [ {points : listeTriee[0].points, nom : listeTriee[0].nom}, {points : listeTriee[1].points, nom : listeTriee[1].nom}, {points : listeTriee[2].points, nom : listeTriee[2].nom} ];
+    console.log(trio);
+    return trio;
   }
 }

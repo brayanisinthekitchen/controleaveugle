@@ -1,6 +1,6 @@
 <h2>Résultats</h2>
 
-<table>
+<!--<table>
   <thead>
     <tr>
         <th colspan="2">Resultats</th>
@@ -12,21 +12,26 @@
         <td>{{joueur.points}}</td>
       </tr>
   </tbody>
-</table>
+</table>-->
 
 
 <div class="affichage_podium">
   <div class="place second">
     <div class="avatar"></div>
-
+    <p>{{trioGagnant[1].nom}}</p>
+    <p>{{trioGagnant[1].points}}</p>
     <div class="seconde_place">2</div>
   </div>
   <div class="place premier">
     <div class="avatar"></div>
+    <p>{{trioGagnant[0].nom}}</p>
+    <p>{{trioGagnant[0].points}}</p>
     <div class="premiere_place">1</div>
   </div>
   <div class="place troisieme">
     <div class="avatar"></div>
+    <p>{{trioGagnant[2].nom}}</p>
+    <p>{{trioGagnant[2].points}}</p>
     <div class="troisieme_place">3</div>
   </div>
 </div>
