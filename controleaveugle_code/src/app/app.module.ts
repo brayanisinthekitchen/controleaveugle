@@ -12,6 +12,7 @@ import { ListPlaylistComponent } from './pages/list-playlist/list-playlist.compo
 import { PartieComponent } from './partie/partie.component';
 import { ResultsComponent } from './pages/results/results.component';
 import { HeaderComponent } from './pages/header/header.component';
+import { JoueurComponent } from './joueur/joueur.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeaderComponent } from './pages/header/header.component';
     ListPlaylistComponent,
     ResultsComponent,
     HeaderComponent,
-    PartieComponent
+    PartieComponent,
+    JoueurComponent
   ],
   imports: [
     BrowserModule,
