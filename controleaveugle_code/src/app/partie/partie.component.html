@@ -1,7 +1,7 @@
 <div id="joueurs">
   <div *ngFor="let joueur of joueurs" class="liste_joueur">
       <h3>{{joueur.nom}}</h3>
-      <h3>{{joueur.points}}</h3>
+      <h3 class="score"><div class="score_icon"></div>{{joueur.points}}</h3>
   </div>
 </div>
 <div class="container_loading">
