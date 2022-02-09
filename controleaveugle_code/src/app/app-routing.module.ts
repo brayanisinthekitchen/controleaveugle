@@ -4,6 +4,7 @@ import { DashboardWithAccountComponent } from './pages/dashboard-with-account/da
 import { ResultsComponent } from './pages/results/results.component';
 
 const routes: Routes = [
+  //{path: '', loadChildren: () => import('./pages/pages.module').then(mod => mod.PagesModule),},
   {path: 'dashboard', component: DashboardWithAccountComponent},
   {path: 'results', component: ResultsComponent},
 ];
