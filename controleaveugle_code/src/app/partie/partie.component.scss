@@ -8,7 +8,13 @@
 
 .liste_joueur{
   margin: auto;
-  border: 1px dashed darkgray;
+  text-decoration-color: $blanc;
+  background-color: ivory;
+  width: 8vw;
+  text-align: center;
+  box-shadow:  10px 10px rgba(245, 245, 245, .5);
+  border-radius: 33px;
+  border: none;
   border-radius: 20%;
 }
 
@@ -67,6 +73,7 @@ body {
 }
 
 .container_loading {
+  text-align: center;
   position: relative;
   width: 50%;
   margin: 10vh auto;
