@@ -17,11 +17,35 @@
   flex-direction: row;
   justify-content: space-around;
 }
+.response{
+  width: 33%;
+}
 #container_reponse{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+input {
+  padding: 1rem;
+  width: 100%;
+  background-color: $vert_champ;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 33px;
+  border: none;
+}
+
+input:focus {
+  outline: $lavande auto 1px;
+}
+
+
+::placeholder{
+  color: rgba(156, 153, 153, 0.74) ;
+  font-size: 18px;
+}
+
 
 #envoyer{
   padding: 15px;
@@ -98,4 +122,16 @@ body {
     width: 100%;
     background: #494d5f;
   }
+}
+
+
+label {
+  display: block;
+  color: $blanc ;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 1rem;
+  margin-bottom: 20px;
+
 }
