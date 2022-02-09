@@ -9,6 +9,8 @@ import { PagesModule } from "./pages/pages.module";
 import { DashboardWithAccountComponent } from './pages/dashboard-with-account/dashboard-with-account.component';
 import { PlaylistSearchComponent } from './pages/playlist-search/playlist-search.component';
 import { ListPlaylistComponent } from './pages/list-playlist/list-playlist.component';
+import { ResultsComponent } from './pages/results/results.component';
+import { HeaderComponent } from './pages/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { ListPlaylistComponent } from './pages/list-playlist/list-playlist.compo
     DashboardWithAccountComponent,
     PlaylistSearchComponent,
     ListPlaylistComponent,
+    ResultsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
