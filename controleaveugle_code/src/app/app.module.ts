@@ -9,11 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgPipesModule} from 'ngx-pipes';
 import { JoueurComponent } from './joueur/joueur.component';
 import { PartieComponent } from './partie/partie.component';
+import { HeaderComponent } from './pages/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 
+    HeaderComponent,
     JoueurComponent,
     PartieComponent,
   ],

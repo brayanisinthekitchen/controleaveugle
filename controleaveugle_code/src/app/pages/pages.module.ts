@@ -24,7 +24,6 @@ import { JoueurComponent } from '../joueur/joueur.component';
     PlaylistSearchComponent,
     ListPlaylistComponent,
     ResultsComponent,
-    HeaderComponent,
 
   ],
 

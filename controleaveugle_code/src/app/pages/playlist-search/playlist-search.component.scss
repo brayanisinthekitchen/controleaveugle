@@ -8,7 +8,7 @@
 
 label {
   display: block;
-  color: $blanc ;
+  color: $texte ;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 25px;
@@ -20,29 +20,31 @@ input {
   padding: 1rem;
   width: 100%;
   max-width: 600px;
-  background-color: $vert_champ;
+  background-color: $peche;
   box-sizing: border-box;
   display: block;
   border-radius: 33px;
   border: none;
+  box-shadow: 0px 3px 5px rgba(137,66,66,0.8);
 }
 
 input:focus {
-  outline: $lavande auto 1px;
+  outline: $corail auto 1px;
 }
 
 
 ::placeholder{
-  color: rgba(156, 153, 153, 0.74) ;
+  color: rgba(255, 255, 255, 0.9) ;
   font-size: 18px;
 }
 
 .btn-generate{
   margin-top: 25px;
-  background-color: $vert_fonce;
+  background-color: $corail;
   color: $blanc;
   font-size: 18px ;
   padding: 15px;
   border-radius: 33px;
   border: none;
+  box-shadow: 0px 3px 5px rgba(137,66,66,0.8);
 }
