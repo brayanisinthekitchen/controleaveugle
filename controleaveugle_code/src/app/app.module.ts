@@ -5,26 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { PagesModule } from "./pages/pages.module";
-import { DashboardWithAccountComponent } from './pages/dashboard-with-account/dashboard-with-account.component';
-import { PlaylistSearchComponent } from './pages/playlist-search/playlist-search.component';
-import { ListPlaylistComponent } from './pages/list-playlist/list-playlist.component';
-import { PartieComponent } from './partie/partie.component';
-import { ResultsComponent } from './pages/results/results.component';
-import { HeaderComponent } from './pages/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { JoueurComponent } from './joueur/joueur.component';
 import {NgPipesModule} from 'ngx-pipes';
+import { JoueurComponent } from './joueur/joueur.component';
+import { PartieComponent } from './partie/partie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardWithAccountComponent,
-    PlaylistSearchComponent,
-    ListPlaylistComponent,
-    ResultsComponent,
-    HeaderComponent,
+
+    JoueurComponent,
     PartieComponent,
-    JoueurComponent
   ],
   imports: [
     BrowserModule,
