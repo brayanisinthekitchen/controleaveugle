@@ -14,7 +14,9 @@ import { ResultsComponent } from './results/results.component';
 import { JoueurComponent } from '../joueur/joueur.component';
 import { PopUpResultsDialogComponent } from './pop-up-results-dialog/pop-up-results-dialog.component';
 import { PopUpButtonComponent } from './pop-up-button/pop-up-button.component';
-import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+
+import {NgPipesModule, TrurthifyPipe} from 'ngx-pipes';
 
 
 
@@ -35,7 +37,9 @@ import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
   imports: [
     CommonModule,
     AngularMaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule,
+    NgPipesModule
 
      ],
 

@@ -8,3 +8,21 @@ body{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-dialog-container{
+  background-color: $gris_clair;
+  color: $texte;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  mat-dialog-actions{
+    justify-content: center;
+    button{
+      background-color: $corail;
+      color: $blanc;
+    }
+  }
+
+
+}

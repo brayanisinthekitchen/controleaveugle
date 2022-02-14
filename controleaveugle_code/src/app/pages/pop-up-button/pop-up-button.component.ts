@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
+import { reduce } from 'rxjs';
 import { PopUpResultsDialogComponent } from '../pop-up-results-dialog/pop-up-results-dialog.component';
 
 @Component({
@@ -9,15 +10,19 @@ import { PopUpResultsDialogComponent } from '../pop-up-results-dialog/pop-up-res
 })
 export class PopUpButtonComponent{
 
-  //constructor(public dialog: MatDialog) { }
 
-/*
+  constructor(public dialog: MatDialog) { }
+
+
   openDialog() {
-    const dialogRef = this.dialog.open(PopUpResultsDialogComponent);
+    const dialogRef = this.dialog.open(PopUpResultsDialogComponent,{
+      width : "250px",
+      panelClass : "container_dialog",
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
-  }*/
+  }
 
 }

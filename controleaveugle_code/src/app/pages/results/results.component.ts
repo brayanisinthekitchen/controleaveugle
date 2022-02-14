@@ -18,13 +18,6 @@ export class ResultsComponent implements OnInit {
     this.trioGagnant = this.getTrio(this.joueurs);
   }
 
-  /*openDialog() {
-    const dialogRef = this.dialog.open(PopUpResultsDialogComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }*/
 
   getTrio(joueurs = JOUEURS){
     let listeTriee = joueurs.sort().reverse();

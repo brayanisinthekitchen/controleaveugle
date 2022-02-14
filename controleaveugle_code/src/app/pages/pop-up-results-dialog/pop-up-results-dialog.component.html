@@ -1,4 +1,16 @@
-<h1 mat-dialog-title>Hi </h1>
-<div mat-dialog-content>
-  <p>What's your favorite animal?</p>
+<div class="pop_up_container">
+  <h2 mat-dialog-title>Classement</h2>
+  <div mat-dialog-content>
+    <table>
+      <tbody *ngFor="let joueur of joueurs  | orderBy:'-points'">
+          <tr>
+            <td>{{joueur.nom}}</td>
+            <td>{{joueur.points}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>Fermer</button>
+  </mat-dialog-actions>
 </div>
