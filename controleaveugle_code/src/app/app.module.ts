@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { PagesModule } from "./pages/pages.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {NgPipesModule} from 'ngx-pipes';
+import {NgPipesModule, TrurthifyPipe} from 'ngx-pipes';
 import { JoueurComponent } from './joueur/joueur.component';
 import { PartieComponent } from './partie/partie.component';
 import { HeaderComponent } from './pages/header/header.component';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { HeaderComponent } from './pages/header/header.component';
     BrowserAnimationsModule,
     NgPipesModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

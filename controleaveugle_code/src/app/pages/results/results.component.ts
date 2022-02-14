@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { JOUEURS } from 'src/app/joueurs';
 import { Joueur } from 'src/app/joueur';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { PopUpResultsDialogComponent } from '../pop-up-results-dialog/pop-up-results-dialog.component';
 
 @Component({
   selector: 'app-results',
@@ -15,6 +17,14 @@ export class ResultsComponent implements OnInit {
   ngOnInit(): void {
     this.trioGagnant = this.getTrio(this.joueurs);
   }
+
+  /*openDialog() {
+    const dialogRef = this.dialog.open(PopUpResultsDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }*/
 
   getTrio(joueurs = JOUEURS){
     let listeTriee = joueurs.sort().reverse();

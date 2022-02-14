@@ -12,6 +12,10 @@ import { PartieComponent } from '../partie/partie.component';
 import { PlaylistSearchComponent } from './playlist-search/playlist-search.component';
 import { ResultsComponent } from './results/results.component';
 import { JoueurComponent } from '../joueur/joueur.component';
+import { PopUpResultsDialogComponent } from './pop-up-results-dialog/pop-up-results-dialog.component';
+import { PopUpButtonComponent } from './pop-up-button/pop-up-button.component';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+
 
 
 
@@ -24,14 +28,19 @@ import { JoueurComponent } from '../joueur/joueur.component';
     PlaylistSearchComponent,
     ListPlaylistComponent,
     ResultsComponent,
+    PopUpResultsDialogComponent,
+    PopUpButtonComponent,
 
   ],
-
   imports: [
     CommonModule,
     AngularMaterialModule,
     FlexLayoutModule
 
-     ]
+     ],
+
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
+  ],
 })
 export class PagesModule { }
