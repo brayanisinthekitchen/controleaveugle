@@ -1,4 +1,4 @@
 
 export interface Config{
-  items : any;
+  items : String[];
 }
