@@ -11,6 +11,7 @@ import { JoueurComponent } from './joueur/joueur.component';
 import { PartieComponent } from './partie/partie.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { ChansonComponent } from './chanson/chanson.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
     HeaderComponent,
     JoueurComponent,
     PartieComponent,
+    ChansonComponent,
   ],
   imports: [
     BrowserModule,
