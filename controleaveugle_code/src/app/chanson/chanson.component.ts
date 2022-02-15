@@ -7,16 +7,15 @@ import { ChansonServiceService } from '../chanson-service.service';
   styleUrls: ['./chanson.component.scss']
 })
 export class ChansonComponent implements OnInit {
-  chansons : Chanson;
-  constructor() { }
+  chansons : Chanson[] = [];
+  constructor(private chansonServiceService:ChansonServiceService) { }
 
   ngOnInit(): void {
-    this.chansons.artiste;
-    this.chansons.titre;
+    this.chansonServiceService.getPlaylist("https://open.spotify.com/playlists/62aTmrLRUWaYSFGbrw23RJ");
   }
 
 
-  getChanson(param: string): Chanson{
-    return this.chansons = ChansonServiceService.getPlaylist(param);
-  }
+  /*getChanson(param: string): Chanson{
+    return this.chansons = this.chansonServiceService.getPlaylist(param);
+  }*/
 }
