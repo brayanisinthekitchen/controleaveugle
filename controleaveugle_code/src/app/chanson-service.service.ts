@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse, HttpErrorResponse, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Chanson } from './chanson';
+import { eventListeners } from '@popperjs/core';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +13,13 @@ export class ChansonServiceService {
 
   getPlaylist(param: string): void{
     //var retour: Chanson[];
-    const headers = new HttpHeaders({'Content-Type':'application/json;' , 'Authorization':'Bearer BQD-kYWf07qF7uYSC8TPAbw22aY6IyHYua9UHmigjAvKVucjxcWzzvRhYsk0vIr_Q2QpOJ8YbCecENCrbGsuC3k9EPBmjvB6wF_wC-NLQ5hMIWmBF0e8moed6Vm3jL2X5hd0FBVQPwIaLYGE8UZkR8d8JFXzUlyUyXxGh5MWD4kSmPXP'});
+    const headers = new HttpHeaders({'Content-Type':'application/json;' , 'Authorization':'Bearer BQBl-WsT53_WTjmOyA-VoPqXZ8IyhnOMnFv430rGY6YH3HU0VytwHI9DevwZRFncST-ihyKD3RSyOcvxxKhVeyVIPeb_XYRx0JIywPe9bAxbnTqd9PuF-haqbUxvmxbLCGRe0gh5eZagby16dlS8T-vLkuHwQ7603ob-a6Dtt7Judhp6'});
     var params:String[] = param.split('/');
     var id = params.pop();
-    var res = this.http.get("https://api.spotify.com/v1/playlists/"+ id, {headers});
-    console.dir(res);
+    console.log(id);
+    var res = this.http.get("https://api.spotify.com/v1/playlists/"+ id+"/tracks", {headers});
+    console.log(res.subscribe());
   }
+
 }
 
