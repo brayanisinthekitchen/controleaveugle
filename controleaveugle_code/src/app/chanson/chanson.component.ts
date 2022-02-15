@@ -11,7 +11,7 @@ export class ChansonComponent implements OnInit {
   constructor(private chansonServiceService:ChansonServiceService) { }
 
   ngOnInit(): void {
-    this.chansonServiceService.getPlaylist("https://open.spotify.com/playlist/3cEYpjA9oz9GiPac4AsH4n");
+    this.chansonServiceService.getPlaylist("https://open.spotify.com/playlist/62aTmrLRUWaYSFGbrw23RJ");
   }
 
 
