@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { JOUEURS } from 'src/app/joueurs';
+
 import { Joueur } from 'src/app/joueur';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { PopUpResultsDialogComponent } from '../pop-up-results-dialog/pop-up-results-dialog.component';
+import { JoueursService } from 'src/app/joueurs.service';
+
+
 
 @Component({
   selector: 'app-results',
@@ -10,19 +11,26 @@ import { PopUpResultsDialogComponent } from '../pop-up-results-dialog/pop-up-res
   styleUrls: ['./results.component.scss']
 })
 export class ResultsComponent implements OnInit {
-  joueurs = JOUEURS;
+  joueurs : Joueur[] = [];
   trioGagnant: any ;
-  constructor() { }
+  joueursList: any;
+  constructor(private joueursService: JoueursService) { }
 
   ngOnInit(): void {
-    this.trioGagnant = this.getTrio(this.joueurs);
+    this.trioGagnant = this.getTrio();
+    //console.log(this.getTrio());
+    this.joueursList = this.getJoueurs();
+    //console.log(this.getJoueurs());
   }
 
 
-  getTrio(joueurs = JOUEURS){
+  getTrio(joueurs = this.joueursService.getJoueurs()){
     let listeTriee = joueurs.sort().reverse();
     let trio = [ {points : listeTriee[0].points, nom : listeTriee[0].nom}, {points : listeTriee[1].points, nom : listeTriee[1].nom}, {points : listeTriee[2].points, nom : listeTriee[2].nom} ];
-    console.log(trio);
     return trio;
+  }
+
+  getJoueurs() : Joueur[]{
+    return this.joueurs = this.joueursService.getJoueurs();
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { JOUEURS } from '../joueurs';
+import { JoueursService } from '../joueurs.service';
+import { Joueur } from '../joueur';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -9,10 +10,17 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class JoueurComponent implements OnInit {
 
-  joueurs = JOUEURS;
-  constructor() { }
+  joueurs : Joueur[] = [];
+  joueursList: any;
+
+  constructor(private joueursService: JoueursService) { }
 
   ngOnInit(): void {
+    this.joueursList = this.getJoueur();
+  }
+
+  getJoueur(): Joueur[]{
+    return this.joueurs = this.joueursService.getJoueurs();
   }
 
 }
