@@ -2,5 +2,8 @@
   <div *ngFor="let joueur of joueursList | orderBy:'-points'" class="liste_joueur">
       <h3 class="player_name">{{joueur.nom}}</h3>
       <h3 class="score"><div class="score_icon"></div>{{joueur.points}}</h3>
+      <div>
+        {{spotify}}
+      </div>
   </div>
 </div>
