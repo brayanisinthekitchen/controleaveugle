@@ -30,8 +30,7 @@ import { ChansonComponent } from './chanson/chanson.component';
     HttpClientModule,
     PagesModule,
     BrowserAnimationsModule,
-    NgPipesModule,
-    PagesModule
+    NgPipesModule
   ],
   providers: [
     {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
