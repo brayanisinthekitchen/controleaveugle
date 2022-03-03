@@ -1,48 +1,38 @@
-const express = require("express");
-const cors = require("cors");
-const app = express();
-var corsOptions = {
-  origin: "http://localhost:8081"
-};
-app.use(cors(corsOptions));
-// parse requests of content-type - application/json
-const db = require("./models");
-const Role = db.role;
-db.sequelize.sync({force: true}).then(() => {
-  console.log('Drop and Resync Db');
-  console.log('DB connection sucessful.');
-  initial();
-});
-app.use(express.json());
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(express.urlencoded({ extended: true }));
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to my application." });
-});
-// set port, listen for requests
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+// Get the mysql service
+var mysql = require('mysql');
+
+// Add the credentials to access your database
+var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'root',
+    database : 'ControleAveugleDb',
+    socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
 });
 
-// routes
-require('./routes/auth.routes')(app);
-require('./routes/user.routes')(app);
+// connect to mysql
+connection.connect(function(err) {
+    // in case of error
+    if(err){
+        console.log(err.code);
+        console.log(err.fatal);
+    }
+});
 
-function initial() {
-  Role.create({
-    id: 1,
-    name: "user"
-  });
- 
-  Role.create({
-    id: 2,
-    name: "moderator"
-  });
- 
-  Role.create({
-    id: 3,
-    name: "admin"
-  });
-}
+// Perform a query
+$query = 'SELECT * from user LIMIT 10';
+
+connection.query($query, function(err, rows, fields) {
+    if(err){
+        console.log("An error ocurred performing the query.");
+        return;
+    }
+
+    console.log("Query succesfully executed: ", rows);
+});
+
+// Close the connection
+connection.end(function(){
+    // The connection has been closed
+    console.log("connexion ended");
+});
