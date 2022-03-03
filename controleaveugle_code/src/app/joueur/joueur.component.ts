@@ -18,10 +18,20 @@ export class JoueurComponent implements OnInit {
 
   ngOnInit(): void {
     this.joueursList = this.getJoueur();
+    this.joueursList.forEach((element: { points: void; }) => {
+      element.points = this.joueursService.initScore()
+    })
   }
 
   getJoueur(): Joueur[]{
     return this.joueurs = this.joueursService.getJoueurs();
   }
+
+  calcScore(){
+    this.joueurs.forEach(element => {
+      element.points = 0;
+
+    });
+}
 
 }

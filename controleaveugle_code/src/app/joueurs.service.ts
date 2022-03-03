@@ -12,4 +12,10 @@ export class JoueursService {
   getJoueurs():Joueur[]{
     return JOUEURS;
   }
+
+  initScore(){
+    JOUEURS.forEach(element => {
+      element.points = 0
+    });
+  }
 }
