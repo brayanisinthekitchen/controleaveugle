@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule,ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 import { PagesModule } from "./pages/pages.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgPipesModule, TrurthifyPipe} from 'ngx-pipes';
@@ -17,21 +17,21 @@ import { ChansonComponent } from './chanson/chanson.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     HeaderComponent,
     JoueurComponent,
     PartieComponent,
     ChansonComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule,
     PagesModule,
     BrowserAnimationsModule,
-    NgPipesModule
+    NgPipesModule,
+    PagesModule
   ],
   providers: [
     {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
@@ -40,3 +40,6 @@ import { ChansonComponent } from './chanson/chanson.component';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
+
+
+
