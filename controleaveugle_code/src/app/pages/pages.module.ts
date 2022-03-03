@@ -17,6 +17,8 @@ import { PopUpButtonComponent } from './pop-up-button/pop-up-button.component';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 
 import {NgPipesModule, TrurthifyPipe} from 'ngx-pipes';
+import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -32,15 +34,19 @@ import {NgPipesModule, TrurthifyPipe} from 'ngx-pipes';
     ResultsComponent,
     PopUpResultsDialogComponent,
     PopUpButtonComponent,
+    ProfileComponent,
 
   ],
+  exports: [
+  ],
+  
   imports: [
     CommonModule,
     AngularMaterialModule,
     FlexLayoutModule,
-    MatDialogModule,
-    NgPipesModule
-
+    NgPipesModule,
+      MatDialogModule,
+      FormsModule
      ],
 
   providers: [
