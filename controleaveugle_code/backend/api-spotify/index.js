@@ -6,8 +6,8 @@ const scopes = [
   ];
   
 var spotifyApi = new SpotifyWebApi({
-    clientId: '39d1835f65be4e0c813a8bbb7357d39d',
-    clientSecret: 'ccc8204d22e14c04b320092d18cc87b8',
+    clientId: '//See ReadMe',
+    clientSecret: '//See ReadMe',
     redirectUri: 'http://localhost:4200/login'
   });
   

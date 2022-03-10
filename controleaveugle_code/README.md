@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+#API SPOTIFY 
+39d1835f65be4e0c813a8bbb7357d39d
+ccc8204d22e14c04b320092d18cc87b8
