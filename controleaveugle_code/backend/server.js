@@ -1,3 +1,36 @@
+const express = require("express");
+const cors = require("cors");
+const app = express();
+
+var corsOptions = {
+  origin: "http://localhost:8081"
+};
+
+app.use(cors(corsOptions));
+// parse requests of content-type - application/json
+app.use(express.json());
+// parse requests of content-type - application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
+// simple route
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to the backend of the app." });
+});
+require("./routes/user.route")(app);
+// set port, listen for requests
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
+});
+
+app.use('/user/:id', function(req, res, next) {
+  console.log('Request URL:', req.originalUrl);
+  next();
+}, function (req, res, next) {
+  console.log('Request Type:', req.method);
+  next();
+});
+
+
 // Get the mysql service
 var mysql = require('mysql');
 
@@ -34,5 +67,5 @@ connection.query($query, function(err, rows, fields) {
 // Close the connection
 connection.end(function(){
     // The connection has been closed
-    console.log("connexion ended");
+    console.log("connexion DB ended");
 });
